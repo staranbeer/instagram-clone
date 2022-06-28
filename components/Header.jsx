@@ -3,17 +3,17 @@ import { BsInstagram } from "react-icons/bs";
 import { RiMessengerLine, RiHeartLine, RiHomeLine } from "react-icons/ri";
 
 import { MdOutlineExplore, MdAdd, MdSearch } from "react-icons/md";
+import { faker } from "@faker-js/faker";
 
 const Header = () => {
   return (
-    <div className="border-b ">
-      <header className="header p-4 sm:py-2.5 flex items-center  gap-6 border-gray-300 max-w-insta mx-auto ">
+    <div className="border-b border-gray-300 bg-white">
+      <header className="header py-4 px-6 sm:py-2.5 flex items-center  gap-6  max-w-header mx-auto ">
         <div className="header__left flex items-center gap-6 flex-1 ">
           <div className="header__logo">
-            <BsInstagram size={22} />
+            <BsInstagram size={24} />
           </div>
         </div>
-
         <div className="hidden sm:flex  p-2 px-4 bg-[#efefef]  items-center rounded-lg">
           <div className="">
             <MdSearch className="text-gray-400" size={20} />
