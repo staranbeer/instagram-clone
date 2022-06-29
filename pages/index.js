@@ -6,14 +6,14 @@ import Suggestions from "./../components/Suggestions/Suggestions";
 
 const Home = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 ">
       <Header />
       <div className="flex justify-center min-h-screen md:justify-start mx-auto max-w-body sm:px-20 ">
         <div className="flex flex-col">
           <Stories />
           <Posts />
         </div>
-        <div className="md:block hidden">
+        <div className="md:block hidden flex-1">
           <Suggestions />
         </div>
       </div>
