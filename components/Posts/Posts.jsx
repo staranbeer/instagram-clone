@@ -3,7 +3,8 @@ import Post from "./Post";
 
 const Posts = () => {
   return (
-    <div>
+    <div className="px-4 sm:px-0">
+      <Post />
       <Post />
     </div>
   );

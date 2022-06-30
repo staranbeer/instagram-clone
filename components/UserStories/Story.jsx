@@ -9,7 +9,7 @@ const Story = () => {
         </div>
       </div>
 
-      <div className="story__name text-xs  w-16 truncate overflow-hidden text-ellipsis mt-1 text-gray-700 text-center">
+      <div className="story__name   w-16 truncate overflow-hidden text-ellipsis mt-1 text-xs text-gray-700 text-center">
         singghhihiaifihsihfiaohioasshifhsas
       </div>
     </button>
