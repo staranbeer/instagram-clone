@@ -8,12 +8,12 @@ const Home = () => {
   return (
     <div className="bg-gray-100 ">
       <Header />
-      <div className="flex justify-center min-h-screen md:justify-start mx-auto max-w-body sm:px-20 ">
-        <div className="flex flex-col">
+      <div className="flex justify-center min-h-screen md:justify-start mx-auto max-w-body sm:px-20 overflow-hidden">
+        <div className="flex flex-col max-w-[470px]">
           <Stories />
           <Posts />
         </div>
-        <div className="md:block hidden flex-1">
+        <div className="suggestions:block hidden flex-1">
           <Suggestions />
         </div>
       </div>

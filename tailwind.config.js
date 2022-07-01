@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xs: "480px",
+        xs: "470px",
+        suggestions: "1000px",
       },
       maxWidth: {
         header: "975px",
