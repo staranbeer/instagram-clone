@@ -4,14 +4,23 @@ import { RiMessengerLine, RiHeartLine, RiHomeLine } from "react-icons/ri";
 
 import { MdOutlineExplore, MdAdd, MdSearch } from "react-icons/md";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <div className="border-b border-gray-300 bg-white">
       <header className="header py-2.5 px-5  flex   gap-6  max-w-header mx-auto justify-between">
-        <div className="header__left  gap-6">
-          <div className="header__logo w-[100px] ">
-            <img src="/images/Instagram_logo.svg" className="w-full" alt="" />
+        <div className="header__left  gap-6 translate-y-0.5">
+          <div className="header__logo w-[110px] ">
+            <Link href="/">
+              <a>
+                <img
+                  src="/images/Instagram_logo.svg"
+                  className="w-full"
+                  alt=""
+                />
+              </a>
+            </Link>
           </div>
         </div>
         <div className="flex gap-20 items-center">
@@ -28,13 +37,17 @@ const Header = () => {
             />
           </div>
           <div className="header__right flex gap-5 items-center flex-1 justify-end">
-            <div className="header__logo">
-              <RiHomeLine size={27} />
-            </div>
+            <Link href={"/"} className="header__logo">
+              <a>
+                <RiHomeLine size={27} />
+              </a>
+            </Link>
 
-            <div className="header__logo">
-              <RiMessengerLine size={25} />
-            </div>
+            <Link className="header__logo" href={"/direct"}>
+              <a>
+                <RiMessengerLine size={25} />
+              </a>
+            </Link>
 
             <div className="header__logo  border-black border-2 rounded-lg">
               <MdAdd size={19} />

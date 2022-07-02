@@ -15,7 +15,7 @@ const Story = () => {
         <div className="bg-white rounded-full p-0.5">
           <div className="w-14 h-14  rounded-full ">
             <img
-              src={faker.image.avatar()}
+              src={faker.image.business()}
               className="rounded-full w-14 h-14 "
               alt=""
             />
