@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="border-b border-gray-300 bg-white">
+    <div className="border-b border-gray-300 bg-white overflow-hidden">
       <header className="header py-2.5 px-5  flex   gap-6  max-w-header mx-auto justify-between">
         <div className="header__left  gap-6 translate-y-0.5">
           <div className="header__logo w-[110px] ">
