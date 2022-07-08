@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="bg-gray-100 ">
       <Header />
-      <div className="flex justify-start items-center min-h-screen md:justify-start mx-auto max-w-body sm:px-20 ">
+      <div className="xs:flex justify-center items-center min-h-screen md:justify-start mx-auto max-w-body sm:px-20 ">
         <div className="flex flex-col max-w-[470px]">
           <Stories />
           <Posts />
