@@ -3,7 +3,7 @@ import Story from "./Story";
 
 const Stories = () => {
   return (
-    <div className="bg-white  max-w-stories p-4  flex items-center gap-3 md:gap-3.5 overflow-x-scroll  scrollbar-none rounded-lg  xs:mt-[25px] border border-gray-300 ">
+    <div className="bg-white  max-w-stories px-4 py-2 xs:p-4  flex items-center gap-3 md:gap-3.5 overflow-x-scroll  scrollbar-none rounded-lg  xs:mt-[25px] border border-gray-300 ">
       <Story />
       <Story />
       <Story />

@@ -3,7 +3,7 @@ import Post from "./Post";
 
 const Posts = () => {
   return (
-    <div className="">
+    <div className="space-y-4 xs:mt-[25px]">
       <Post />
       <Post />
     </div>

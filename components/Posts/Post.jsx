@@ -7,7 +7,7 @@ import { faker } from "@faker-js/faker";
 
 const Post = () => {
   return (
-    <div className="post border border-gray-300  rounded-lg mt-4 overflow-hidden ">
+    <div className="post border border-gray-300  rounded-lg overflow-hidden ">
       <header className="bg-white post__header p-4 py-3 rounded-lg flex items-center justify-between border-b border-gray-200">
         <div className="flex gap-4 text-xs items-center font-bold ">
           <div className="post__user-avatar border rounded-full ">

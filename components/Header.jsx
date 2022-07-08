@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="border-b border-gray-300 bg-white overflow-hidden">
+    <div className="border-b border-gray-300 bg-white">
       <header className="header py-2.5 px-5  flex   gap-6  max-w-header mx-auto justify-between">
         <div className="header__left  gap-6 translate-y-0.5">
           <div className="header__logo w-[110px] ">
@@ -37,8 +37,8 @@ const Header = () => {
             />
           </div>
           <div className="header__right flex gap-5 items-center flex-1 justify-end">
-            <Link href={"/"} className="header__logo">
-              <a>
+            <Link href={"/"}>
+              <a className="header__logo hidden xs:block">
                 <RiHomeLine size={27} />
               </a>
             </Link>
@@ -49,20 +49,39 @@ const Header = () => {
               </a>
             </Link>
 
-            <div className="header__logo  border-black border-2 rounded-lg">
-              <MdAdd size={19} />
-            </div>
+            <Link href={""}>
+              <a className="header__logo hidden xs:block">
+                <div className="header__logo  border-black border-2 rounded-lg">
+                  <MdAdd size={19} />
+                </div>
+              </a>
+            </Link>
 
-            <div className="header__logo">
-              <MdOutlineExplore size={27} />
-            </div>
-            <div className="header__logo ">
-              <RiHeartLine size={27} />
-            </div>
+            <Link
+              className="header__logo  border-black border-2 rounded-lg"
+              href={""}
+            >
+              <a className="header__logo hidden xs:block">
+                <MdOutlineExplore size={27} />
+              </a>
+            </Link>
 
-            <div className="header__logo">
-              <div className="w-6 h-6 bg-green-500 rounded-full"></div>
-            </div>
+            <Link
+              className="header__logo  border-black border-2 rounded-lg"
+              href={""}
+            >
+              <a className="header__logo hidden xs:block">
+                <RiHeartLine size={27} />
+              </a>
+            </Link>
+            <Link
+              className="header__logo  border-black border-2 rounded-lg"
+              href={""}
+            >
+              <a className="header__logo hidden xs:block">
+                <div className="w-6 h-6 bg-green-500 rounded-full"></div>
+              </a>
+            </Link>
           </div>
         </div>
       </header>
