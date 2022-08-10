@@ -4,7 +4,9 @@ import Header from "../components/layout/Header/Header";
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <Header />
+      <div className="border-b">
+        <Header />
+      </div>
       <Component {...pageProps} />
     </div>
   );
