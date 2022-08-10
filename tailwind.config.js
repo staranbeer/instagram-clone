@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       screens: {
         xs: "470px",
-        dms: "936px",
+        sm: "936px",
         suggestions: "1000px",
       },
       maxWidth: {
