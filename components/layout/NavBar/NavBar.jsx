@@ -28,7 +28,7 @@ const tabs = [
     id: "messages",
     iconOutline: <RiMessengerLine size={26} />,
     iconFilled: <RiMessengerFill size={26} />,
-    to: "messages",
+    to: "/messages",
   },
   {
     name: "createPost",
