@@ -7,7 +7,9 @@ function MyApp({ Component, pageProps }) {
       <div className="border-b">
         <Header />
       </div>
-      <Component {...pageProps} />
+      <div className="pt-[59px]">
+        <Component {...pageProps} />
+      </div>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import { faker } from "@faker-js/faker";
 import {
   HiDotsHorizontal,
   HiOutlineBookmark,
@@ -8,19 +7,19 @@ import { FaRegComment } from "react-icons/fa";
 
 import { IoPaperPlaneOutline } from "react-icons/io5";
 
-const Post = () => {
+const Post = ({ likes, userName, userAvatar, image, caption, posted }) => {
   return (
     <div className="post mt-4 bg-white rounded-lg  border border-gray-200 overflow-hidden max-w-[470px]">
       <header className="post__header px-3 py-2 flex justify-between items-center">
         <div className="post__header-left flex items-center gap-4 text-sm font-medium">
           <div className="user__avatar">
             <img
-              src={faker.image.avatar()}
+              src={userAvatar}
               alt=""
               className="h-8 w-8 object fit rounded-full"
             />
           </div>
-          <div className="user__name">tarantarantaranbeer</div>
+          <div className="user__name">{userName}</div>
         </div>
         <div className="post__header-right">
           <div className="p-1">
@@ -31,8 +30,8 @@ const Post = () => {
       <div className="post__body">
         <div className="post__img-container ">
           <img
-            src={faker.image.abstract()}
-            className="h-[470px] w-[470px] object-fit"
+            src={image}
+            className="h-[470px] w-[470px] object-cover"
             alt=""
           />
         </div>
@@ -48,14 +47,11 @@ const Post = () => {
         </div>
       </div>
       <div className="post__stats px-5 pb-3">
-        <div className="post__likes text-sm font-medium">9 likes</div>
+        <div className="post__likes text-sm font-medium">{likes} likes</div>
         <div className="flex items-center mt-2">
-          <div className="user__name text-sm  font-medium">
-            tarantarantaranbeer
-          </div>
+          <div className="user__name text-sm  font-medium">{userName}</div>
           <div className="post__caption text-sm ml-2 max-w-[200px] text-gray-800 truncate">
-            some really cool caption and stuff that i think would make me look
-            cool in front my frenzzzz.
+            {caption}
           </div>
         </div>
         <div className="post__comments">

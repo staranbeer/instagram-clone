@@ -64,7 +64,7 @@ const NavBar = ({}) => {
     setIsActive(id);
   }
   return (
-    <nav className="flex  items-center gap-5 ">
+    <nav className="flex  items-center gap-3.5 sm:gap-5 ">
       {tabs.map(({ id, iconFilled, iconOutline, to = null }) => (
         <NavLink
           key={id}
