@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Icon from "../../util/Icon/Icon";
+import Icon from "./../../../util/Icon/Icon";
 
 const NavLink = ({
   changeActive,
@@ -8,7 +8,10 @@ const NavLink = ({
   href = null,
   id,
   isActive,
+  isMobile,
 }) => {
+  let navLinkStyles = "h-6 w-6";
+  let navMobileLinkStyles = "block";
   let children = (
     <Icon
       outline={iconOutline}
@@ -25,7 +28,13 @@ const NavLink = ({
     );
   }
   return (
-    <div onClick={() => changeActive(id)} className="h-6 w-6 block">
+    <div
+      onBlur={() => changeActive(null)}
+      onClick={() => changeActive(id)}
+      className={`${navLinkStyles}  ${
+        isMobile ? navMobileLinkStyles : " hidden xs:block "
+      }`}
+    >
       {element}
     </div>
   );

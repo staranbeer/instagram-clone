@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   RiAddBoxFill,
   RiAddBoxLine,
@@ -12,10 +11,9 @@ import {
   RiSearchLine,
 } from "react-icons/ri";
 import { useState } from "react";
-import Icon from "../../util/Icon/Icon";
 import NavLink from "./NavLink";
 
-const tabs = [
+let tabs = [
   {
     name: "Home",
     id: "home",
@@ -58,14 +56,14 @@ const tabs = [
   },
 ];
 
-const NavBar = ({}) => {
+const NavBar = () => {
   const [isActive, setIsActive] = useState("home");
   function changeActive(id) {
     setIsActive(id);
   }
   return (
     <nav className="flex  items-center gap-3.5 sm:gap-5 ">
-      {tabs.map(({ id, iconFilled, iconOutline, to = null }) => (
+      {tabs.map(({ small, id, iconFilled, iconOutline, to = null }) => (
         <NavLink
           key={id}
           id={id}

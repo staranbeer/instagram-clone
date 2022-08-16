@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Post from "./Post";
 
 const Posts = () => {
@@ -21,7 +21,7 @@ const Posts = () => {
   }, []);
 
   return (
-    <div className="flex flex-col max-w-[470px] mx-auto">
+    <main className="flex flex-col max-w-[470px] mx-auto">
       {posts.map(
         ({ id, likes, userName, userAvatar, image, caption, posted }) => {
           return (
@@ -37,7 +37,7 @@ const Posts = () => {
           );
         },
       )}
-    </div>
+    </main>
   );
 };
 
