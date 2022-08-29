@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-export default function (req, res) {
+function handler(req, res) {
   const count = req.query.count || 10;
   const stories = [...Array(count)].map((_, i) => ({
     id: faker.random.alphaNumeric(8),
@@ -8,3 +8,5 @@ export default function (req, res) {
   }));
   res.status(200).json(JSON.stringify(stories));
 }
+
+export default handler;
