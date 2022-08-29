@@ -1,22 +1,22 @@
-import Link from "next/link";
-import NavBar from "./NavBar/NavBar";
+import React from "react";
+import { RiMessengerLine } from "react-icons/ri";
 
-const Header = ({}) => {
+const Header = () => {
   return (
-    <header className="fixed w-full bg-white  border-b">
-      <div className="px-5  py-2.5  flex justify-between items-center max-w-header    overflow-hidden mx-auto">
-        <Link href={"/"} className="shrink-0">
-          <a>
-            <img
-              src="/images/Instagram_logo.svg"
-              alt=""
-              className="w-[108px] translate-y-0.5 "
-            />
-          </a>
-        </Link>
-        <NavBar />
-      </div>
-    </header>
+    <div className="fixed w-full bg-white border-b border-gray-300">
+      <header className="px-4  top-0  py-[9px] items-center flex justify-between max-w-header bg-white mx-auto">
+        <div className="left">
+          <img
+            className="h-10 translate-y-0.5"
+            src="/images/Instagram_logo.svg"
+            alt=""
+          />
+        </div>
+        <div className="right">
+          <RiMessengerLine size={26} />
+        </div>
+      </header>
+    </div>
   );
 };
 

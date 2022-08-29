@@ -1,13 +1,11 @@
-import "../styles/globals.css";
+import Footer from "../components/layout/Footer/Footer";
 import Header from "../components/layout/Header/Header";
-import Footer from "./../components/layout/Footer/Footer";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <div className="border-b">
-        <Header />
-      </div>
+      <Header />
       <div className="pt-[59px] bg-gray-100 pb-16">
         <Component {...pageProps} />
       </div>

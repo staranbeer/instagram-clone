@@ -1,7 +1,6 @@
 import Stories from "../components/layout/Stories/Stories";
 import Suggestions from "../components/layout/Suggestions/Suggestions";
 import Posts from "./../components/layout/Posts/Posts";
-import Footer from "./../components/layout/Footer/Footer";
 
 const Home = () => {
   return (

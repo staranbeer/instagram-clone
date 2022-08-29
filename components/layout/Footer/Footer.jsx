@@ -1,79 +1,26 @@
-import {
-  RiAddBoxFill,
-  RiAddBoxLine,
-  RiHeartFill,
-  RiHeartLine,
-  RiHome5Fill,
-  RiHome5Line,
-  RiSearchFill,
-  RiSearchLine,
-} from "react-icons/ri";
-import { useState } from "react";
-import NavLink from "../Header/NavBar/NavLink";
-
+import Link from "next/link";
+import React from "react";
+import { RiHome2Line, RiSearch2Line, RiHeart2Line } from "react-icons/ri";
 const tabs = [
-  {
-    name: "Home",
-    id: "home",
-    iconOutline: <RiHome5Line size={26} />,
-    iconFilled: <RiHome5Fill size={26} />,
-    to: "/",
-    small: true,
-  },
-  {
-    name: "createPost",
-    id: "createPost",
-    iconOutline: <RiAddBoxLine size={26} />,
-    iconFilled: <RiAddBoxFill size={26} />,
-    small: true,
-  },
-  {
-    name: "Search",
-    id: "search",
-    iconOutline: <RiSearchLine size={26} />,
-    iconFilled: <RiSearchFill size={26} />,
-    to: "/search",
-    small: true,
-  },
-  {
-    name: "Feed",
-    id: "Feed",
-    iconOutline: <RiHeartLine size={26} />,
-    iconFilled: <RiHeartFill size={26} />,
-    small: true,
-  },
-  {
-    name: "Profile",
-    id: "profile",
-    iconOutline: <span className="block bg-black h-6 w-6 rounded-full"></span>,
-    iconFilled: <span className="block bg-black h-6 w-6 rounded-full"></span>,
-    to: "/profile",
-    small: true,
-  },
+  { name: "Home", to: "/", iconOutline: <RiHome2Line size={26} /> },
+  { name: "Search", to: "/search", iconOutline: <RiSearch2Line size={26} /> },
+  { name: "Liked", to: "/liked", iconOutline: <RiHeart2Line size={26} /> },
+  { name: "Profile", to: "/profile" },
 ];
-
-const Footer = ({}) => {
-  const [isActive, setIsActive] = useState("home");
-  function changeActive(id) {
-    setIsActive(id);
-  }
-
+const Footer = () => {
   return (
-    <footer className="bottom-0 fixed left-0 right-0 w-full bg-white   py-4 xs:hidden px-5">
-      <nav className="flex  items-center justify-between">
-        {tabs.map(({ small, id, iconFilled, iconOutline, to = null }) => (
-          <NavLink
-            key={id}
-            id={id}
-            href={to}
-            iconFilled={iconFilled}
-            iconOutline={iconOutline}
-            isActive={isActive}
-            changeActive={changeActive}
-            isMobile={small}
-          />
-        ))}
-      </nav>
+    <footer className="fixed justify-around bottom-0 bg-white py-3 flex  w-full">
+      {tabs.map((tab) => {
+        return (
+          <Link href={tab.to}>
+            <a>
+              {tab.iconOutline || (
+                <div className="w-[26px] h-[26px] bg-black rounded-full"></div>
+              )}{" "}
+            </a>
+          </Link>
+        );
+      })}
     </footer>
   );
 };

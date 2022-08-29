@@ -4,15 +4,13 @@ import Story from "./Story";
 const Stories = () => {
   const [stories, setStories] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/api/stories")
+    fetch("/api/stories")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        return JSON.parse(data);
-      })
-      .then((allStories) => {
-        setStories(allStories);
+        const stories = JSON.parse(data);
+        setStories(stories);
       })
       .catch((err) => {
         console.log(err);
