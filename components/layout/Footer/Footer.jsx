@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="fixed justify-around bottom-0 bg-white py-3 flex  w-full">
       {tabs.map((tab) => {
         return (
-          <Link href={tab.to}>
+          <Link href={tab.to} key={tab.name}>
             <a>
               {tab.iconOutline || (
                 <div className="w-[26px] h-[26px] bg-black rounded-full"></div>
