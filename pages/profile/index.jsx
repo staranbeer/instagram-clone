@@ -1,5 +1,8 @@
 import { HiOutlineCog } from "react-icons/hi";
-function Index() {
+import createFeed from "../../lib/createFeed";
+function Index(props) {
+  const { feed } = props;
+
   return (
     <div className="max-w-full md:max-w-body mx-auto overflow-hidden">
       <div className="profile__header p-4 md:p-6 pb-6 flex items-center  md:items-start max-w-full  ">
@@ -9,14 +12,14 @@ function Index() {
         <div className="ml-6 xs:ml-8 md:ml-16 md:space-y-[18px]">
           <div className="flex ">
             <div className="items-start  flex  md:mt-2 md:flex-row flex-col">
-              <div className="text-xl sm:text-2xl profile__name tracking-tight md:text-[28px]">
+              <h2 className="text-xl xs:text-[28px]  profile__name tracking-tight ">
                 tarantarantaranbeerr
-              </div>
+              </h2>
               <button className="whitespace-nowrap md:block w-full px-2 py-1 mt-4 md:mt-0 rounded border-gray-300 border text-sm font-medium md:ml-4">
                 Edit profile
               </button>
             </div>
-            <div className="ml-4  mt-1 md:mt-2  ">
+            <div className="ml-6 xs:ml-8  mt-1 md:mt-2  ">
               <HiOutlineCog size="28" />
             </div>
           </div>
@@ -56,13 +59,31 @@ function Index() {
           <div className="text-gray-500">following</div>
         </div>
       </div>
-      <div className="profile__posts grid-cols-3 grid gap-1 md:mt-8">
-        <div className="aspect-square bg-blue-300"></div>
-        <div className="aspect-square bg-blue-300"></div>
-        <div className="aspect-square bg-blue-300"></div>
+      <div className="profile__posts grid-cols-3 grid gap-1 md:mt-6 border-t md:py-12 border-gray-300">
+        {feed.map((post) => (
+          <div
+            className="aspect-square bg-blue-300 cursor-pointer relative"
+            key={post.image}
+          >
+            <img
+              src={post.image}
+              alt={post}
+              className="w-full h-full object-cover absolute top-0 left-0"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
 export default Index;
+
+export async function getStaticProps() {
+  const feed = createFeed();
+  return {
+    props: {
+      feed,
+    },
+  };
+}

@@ -39,7 +39,7 @@ const Header = () => {
           {/* profile tab */}
           <li>
             <Link href="/profile">
-              <span className="w-6 h-6 rounded-full bg-black inline-block"></span>
+              <span className="w-6 h-6 rounded-full bg-black inline-block cursor-pointer"></span>
             </Link>
           </li>
         </ul>
