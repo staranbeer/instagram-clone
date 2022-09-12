@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   RiHeart2Line,
@@ -26,16 +27,20 @@ const Header = () => {
         </div>
 
         {/* header tabs */}
-        <ul className=" gap-4 xs:gap-6 flex">
+        <ul className=" gap-5 xs:gap-6 flex">
           {tabs.map((i) => (
             <li className="cursor-pointer">
-              <span className="w-6 h-6 rounded-full">{i.iconOutline}</span>
+              <Link href={i.to}>
+                <span className="w-6 h-6 rounded-full">{i.iconOutline}</span>
+              </Link>
             </li>
           ))}
 
           {/* profile tab */}
           <li>
-            <span className="w-6 h-6 rounded-full bg-black inline-block"></span>
+            <Link href="/profile">
+              <span className="w-6 h-6 rounded-full bg-black inline-block"></span>
+            </Link>
           </li>
         </ul>
       </header>
