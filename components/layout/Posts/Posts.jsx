@@ -1,24 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Post from "./Post";
 
-const Posts = () => {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/api/posts")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        return JSON.parse(data);
-      })
-      .then((allPosts) => {
-        setPosts(allPosts);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+const Posts = (props) => {
+  const { posts: postsProp } = props;
+  const [posts, setPosts] = useState(postsProp);
 
   return (
     <main className="flex flex-col max-w-[470px] mx-auto">
@@ -35,7 +20,7 @@ const Posts = () => {
               posted={posted}
             />
           );
-        },
+        }
       )}
     </main>
   );
