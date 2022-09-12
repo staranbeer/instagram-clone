@@ -30,7 +30,7 @@ const Header = () => {
         <ul className=" gap-5 xs:gap-6 flex">
           {tabs.map((i) => (
             <li className="cursor-pointer">
-              <Link href={i.to}>
+              <Link href={i.to} key={i.name}>
                 <span className="w-6 h-6 rounded-full">{i.iconOutline}</span>
               </Link>
             </li>
