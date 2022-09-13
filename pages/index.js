@@ -8,7 +8,7 @@ const Home = (props) => {
   const { stories, posts } = props;
 
   return (
-    <div className="    justify-center flex max-w-full mx-auto">
+    <div className="justify-center flex max-w-full mx-auto">
       <div className="xs:mt-6 max-w-full">
         <Stories stories={stories} />
         <Posts posts={posts} />

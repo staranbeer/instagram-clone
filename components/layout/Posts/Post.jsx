@@ -9,7 +9,7 @@ import { IoPaperPlaneOutline } from "react-icons/io5";
 
 const Post = ({ likes, userName, userAvatar, image, caption, posted }) => {
   return (
-    <div className="post mt-4 bg-white rounded-lg  border border-gray-200 overflow-hidden max-w-[470px]">
+    <div className="post  bg-white rounded-lg  border border-gray-200 overflow-hidden max-w-[470px]">
       <header className="post__header px-3 py-2 flex justify-between items-center">
         <div className="post__header-left flex items-center gap-4 text-sm font-medium">
           <div className="user__avatar">

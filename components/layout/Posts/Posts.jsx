@@ -6,7 +6,7 @@ const Posts = (props) => {
   const [posts, setPosts] = useState(postsProp);
 
   return (
-    <main className="flex flex-col max-w-[470px] mx-auto">
+    <main className="flex gap-4 mt-4 flex-col max-w-[470px] mx-auto">
       {posts.map(
         ({ id, likes, userName, userAvatar, image, caption, posted }) => {
           return (
