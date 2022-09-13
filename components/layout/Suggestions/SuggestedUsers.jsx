@@ -8,7 +8,7 @@ const SuggestedUsers = ({ suggestedUsers }) => {
           <div className="w-8 h-8 rounded-full bg-red-400 overflow-hidden translate-y-0.5">
             <img
               src={_.userAvatar}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
               alt=""
             />
           </div>

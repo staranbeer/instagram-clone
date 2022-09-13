@@ -20,7 +20,7 @@ const tabs = [
 
 const Header = () => {
   return (
-    <div className="fixed w-full bg-white border-b border-gray-300">
+    <div className="fixed z-50 w-full bg-white border-b border-gray-300">
       <header className="relative translate-y-1 px-4 py-2.5 top-0 items-center flex justify-between max-w-header mx-auto">
         <div className="left">
           <Link href="/">

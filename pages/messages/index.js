@@ -7,7 +7,7 @@ import {
 
 const Index = () => {
   return (
-    <div className="max-w-body p-5 mx-auto w-full h-[calc(100vh-60px)] overflow-hidden bg-gray-400 ">
+    <div className="max-w-body p-4 mx-auto w-full h-[calc(100vh-60px)] overflow-hidden bg-gray-100 ">
       <div className=" bg-white h-full border border-gray-300 flex">
         {/* left */}
 
