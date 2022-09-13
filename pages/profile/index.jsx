@@ -67,7 +67,7 @@ function Index(props) {
           >
             <img
               src={post.image}
-              alt={post}
+              alt={post.image}
               className="w-full h-full object-cover absolute top-0 left-0"
             />
           </div>

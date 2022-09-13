@@ -23,7 +23,11 @@ const Header = () => {
     <div className="fixed w-full bg-white border-b border-gray-300">
       <header className="relative translate-y-1 px-4 py-2.5 top-0 items-center flex justify-between max-w-header mx-auto">
         <div className="left">
-          <img className="h-10" src="/images/Instagram_logo.svg" alt="" />
+          <Link href="/">
+            <a>
+              <img className="h-10" src="/images/Instagram_logo.svg" alt="" />
+            </a>
+          </Link>
         </div>
 
         {/* header tabs */}
